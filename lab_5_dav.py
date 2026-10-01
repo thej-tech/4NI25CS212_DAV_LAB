@@ -52,7 +52,7 @@ for col in numeric_cols:
   lower = Q1 - 1.5*IQR
   upper = Q3 + 1.5*IQR
 
-  df_treated[col] = df_treated[col].clip(lower,upper)
+df_treated[col] = df_treated[col].clip(lower,upper)
 print(f"{col}: values capped between {lower:.2f} and {upper:.2f}")
 
 print("\nStatistics BEFORE treatment:")
